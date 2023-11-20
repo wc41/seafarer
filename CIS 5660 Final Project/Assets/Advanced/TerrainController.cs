@@ -151,7 +151,7 @@ public class TerrainController : MonoBehaviour {
             Level
         );
         //had to move outside of instantiate because it's a local position
-        terrain.transform.localPosition = new Vector3(terrainSize.x * xIndex, terrainSize.y, terrainSize.z * yIndex);
+        terrain.transform.localPosition = new Vector3(terrainSize.x * xIndex, 0.1f * terrainSize.y, terrainSize.z * yIndex);
         terrain.name = TrimEnd(terrain.name, "(Clone)") + " [" + xIndex + " , " + yIndex + "]";
 
         terrainTiles.Add(new Vector2(xIndex, yIndex), terrain);
