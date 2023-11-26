@@ -3,6 +3,12 @@
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
 #
 */[Ll]ibrary/
+CIS*5660*Final*Project/Library/
+CIS*5660*Final*Project/Logs/
+CIS*5660*Final*Project/UserSettings/
+CIS 5660 Final Project/Library/
+CIS 5660 Final Project/Logs/
+CIS 5660 Final Project/UserSettings/
 */[Tt]emp/
 */[Oo]bj/
 */[Bb]uild/
