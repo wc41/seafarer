@@ -265,7 +265,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   noiseScale: 0.03
-  cellSize: 1.17
+  cellSize: 3
   radiusToRender: 6
   gameTransforms:
   - {fileID: 1560302064}
