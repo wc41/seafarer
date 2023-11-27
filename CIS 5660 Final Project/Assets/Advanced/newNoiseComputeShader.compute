@@ -235,7 +235,7 @@ void CSMain(uint3 id : SV_DispatchThreadID)
     {
         float2 position = float2(positionData[index].x, positionData[index].y);
         //float height = noise2D(position);
-        float height = island(position.x, position.y) * .0083;
+        float height = mesa(position.x, position.y) * .0083;
         //float height = 2.0;
         resultData[index] = height;
     }
