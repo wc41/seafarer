@@ -13,12 +13,10 @@ struct Data
 RWStructuredBuffer<Data> positionData;
 RWStructuredBuffer<float> resultData;
 
-// MINECRAFT CODE BEGINS HERE ----------------------------------------------------------
-
 // NOISE FUNCTIONS USED FOR HEIGHT GENERATION ------------------------------------------
 
 float noise2D(float2 n) {
-    return frac(cos(dot(n, float2(5.9898, 5.1414))) * 43758.5453);
+    return frac(cos(dot(n, float2(5.9898, 5.1414))) * 2345.3);
 }
 
 float interpolation2D(float x, float y) {
@@ -78,7 +76,7 @@ float island(float x, float y) {
     return hi;
 }
 
-float mesa(float x, float y) {
+float cliff(float x, float y) {
     x /= 100.123;
     y /= 120.4;
     float total = 0;
@@ -154,13 +152,13 @@ float generateTerrain(float x, float z, float3 v)
     float temp = v.y;
     float bump = v.z;
 
-    float mesaG = mesa(x / 64.0, z / 64.0);
+    float mesaG = cliff(x / 64.0, z / 64.0);
     float grass = island(x / 64.0, z / 64.0);
-    float mtn = mesa(x / 64.0, z / 64.0);
+    float mtn = cliff(x / 64.0, z / 64.0);
     float is = island(x / 64.0, z / 64.0);
-    float mesaG2 = mesa(x / 64.0, z / 64.0);
+    float mesaG2 = cliff(x / 64.0, z / 64.0);
     float grass2 = island(x / 64.0, z / 64.0);
-    float mtn2 = mesa(x / 64.0, z / 64.0);
+    float mtn2 = cliff(x / 64.0, z / 64.0);
     float is2 = island(x / 64.0, z / 64.0);
 
     float bilin1 = bilin(is, mesaG, temp);
@@ -225,7 +223,6 @@ float heightFromPos(float2 uv) {
     float height = generateTerrain(uv.x, uv.y, biome);
 }
 
-
 [numthreads(100, 1, 1)]
 void CSMain(uint3 id : SV_DispatchThreadID)
 {
@@ -235,7 +232,7 @@ void CSMain(uint3 id : SV_DispatchThreadID)
     {
         float2 position = float2(positionData[index].x, positionData[index].y);
         //float height = noise2D(position);
-        float height = mesa(position.x, position.y) * .0083;
+        float height = cliff(position.x, position.y) * .0083;
         //float height = 2.0;
         resultData[index] = height;
     }
