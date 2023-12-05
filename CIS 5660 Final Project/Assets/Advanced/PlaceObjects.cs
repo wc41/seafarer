@@ -63,7 +63,37 @@ public class PlaceObjects : MonoBehaviour {
 
                 if (Physics.BoxCast(startPoint, objectSize, Vector3.down, out boxHit, orientation) && boxHit.collider.CompareTag("Terrain"))
                 {
-                    Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x, hit.point.y, startPoint.z), orientation, transform);
+                    // check object tags
+                    if (objectToPlace.tag == "Pine Tree" || objectToPlace.tag == "Mushroom Tree" || objectToPlace.tag == "Swirl Tree" || objectToPlace.tag == "Palm Tree")
+                    {
+                        // change orientation for trees
+                        Vector3 fixRotation = new Vector3(-90, 0, 0);
+                        orientation = Quaternion.Euler(fixRotation);
+                    }
+
+                    // instantiating rocks 
+                    if (objectToPlace.tag == "Rock")
+                    {
+                        // Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x - 3, hit.point.y - 12, startPoint.z - 5), orientation, transform);
+                        Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x, hit.point.y - 5, startPoint.z), orientation, transform);
+                    }
+
+                    // cliff trees 
+                    if (objectToPlace.tag == "Pine Tree" || objectToPlace.tag == "Mushroom Tree" || objectToPlace.tag == "Swirl Tree")
+                    {
+                        // check if above rock coast line 
+                        if (hit.point.y > 20.0f)
+                        {
+                            Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x, hit.point.y, startPoint.z), orientation, transform);
+                        }
+                    }
+
+                    // instantiating palm tree for beach biome 
+                    if (objectToPlace.tag == "Palm Tree")
+                    {
+                        Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x, hit.point.y, startPoint.z), orientation, transform);
+                    }
+
                 }
 
                 //Debug code. To use, uncomment the giant thingy below
