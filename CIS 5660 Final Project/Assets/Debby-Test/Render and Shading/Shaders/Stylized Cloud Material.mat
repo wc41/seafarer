@@ -12,7 +12,8 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 2
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -41,14 +42,20 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Blend: 0
+    - _CastShadows: 1
     - _Cloud_Alpha: 1
-    - _Cloud_Cut_Off: 1.49
-    - _Cloud_Density: 4.06
-    - _Cloud_Noise_Scale: 5.19
-    - _Cloud_Power: 0.62
+    - _Cloud_Cut_Off: 1.43
+    - _Cloud_Density: 2.38
+    - _Cloud_Noise_Scale: 0.5
+    - _Cloud_Power: 0.23
     - _Cloud_Scale: 120
+    - _Cull: 0
     - _Depth_Fade_Distance: 0
     - _Distort_Scale: 60
+    - _DstBlend: 10
     - _Foam_Blend: 0.55
     - _Horizon_Distance: 0.5
     - _Intersection_Foam_Blend: 0.01
@@ -58,22 +65,33 @@ Material:
     - _Intersection_Foam_Fade: 0.6
     - _Intersection_Foam_Speed: 0.15
     - _Intersection_Foam_Tiling: 3.16
-    - _Panning_UV_Direction: 12.87
+    - _Panning_UV_Direction: 10.7
     - _Panning_UV_Offset: 2
     - _Panning_UV_Speed: 0.5
-    - _Panning_UV_Tiling: 5
+    - _Panning_UV_Tiling: 5.83
     - _QueueControl: 0
     - _QueueOffset: 0
     - _Refraction_Scale: 0.42
     - _Refraction_Speed: 0.48
     - _Refraction_Strength: 0.41
+    - _SrcBlend: 5
+    - _Surface: 1
     - _Surface_Foam_Direction: 0.6
     - _Surface_Foam_Distortion: 0.44
     - _Surface_Foam_Speed: 0.35
     - _Surface_Foam_Tiling: 0.29
+    - _Time_Offset: 5.28
     - _Vertex_Offset: 0.42
+    - _ZTest: 4
+    - _ZWrite: 0
+    - _ZWriteControl: 0
     m_Colors:
-    - _Cloud_Color: {r: 1, g: 0.1568495, b: 0, a: 0}
+    - _Cloud_Color: {r: 0.8476373, g: 0.63234246, b: 0.9245283, a: 1}
+    - _Cloud_Day: {r: 0.9245283, g: 0.8678355, b: 0.8678355, a: 0}
+    - _Cloud_Highlight: {r: 0.9568628, g: 0.86274517, b: 0.87843144, a: 0}
+    - _Cloud_Midtone: {r: 0.5566038, g: 0.39119795, b: 0.41552228, a: 0}
+    - _Cloud_Night: {r: 0.27413183, g: 0.25111252, b: 0.31132078, a: 0}
+    - _Cloud_Shadow: {r: 0, g: 0, b: 0, a: 0}
     - _Cloud_Speed: {r: 0.27, g: 0.2, b: 0, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 0}
     - _Deep_Color: {r: 0, g: 0, b: 0, a: 0}
@@ -82,7 +100,9 @@ Material:
     - _Foam_Color: {r: 1, g: 0.9864793, b: 0, a: 0}
     - _Horizon_Color: {r: 1, g: 0.9676375, b: 0, a: 0}
     - _Intersection_Foam_Color: {r: 1, g: 0, b: 0, a: 0}
+    - _Ramped_Diffuse_Values: {r: 0, g: 0, b: 0, a: 0}
     - _Shallow_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Three_Tone_Thresholds: {r: 0.4, g: 0.7, b: 0, a: 0}
     - _UV: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &2845886135782692370
