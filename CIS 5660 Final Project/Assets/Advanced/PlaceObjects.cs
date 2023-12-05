@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Unity.Burst.CompilerServices;
 using UnityEngine;
 
 [RequireComponent(typeof(GenerateMesh))]
@@ -15,17 +16,50 @@ public class PlaceObjects : MonoBehaviour {
             // pick random prefab stored in pleaceable objects in terrain controller
             int prefabType = Random.Range(0, TerrainController.PlaceableObjects.Length);
             Vector3 startPoint = RandomPointAboveTerrain();
+            Vector3 startPoint1 = new Vector3(startPoint.x + 5, startPoint.y, startPoint.z);
+            Vector3 startPoint2 = new Vector3(startPoint.x + 5, startPoint.y, startPoint.z + 5);
+            Vector3 startPoint3 = new Vector3(startPoint.x, startPoint.y, startPoint.z + 5);
+            Vector3 startPoint4 = new Vector3(startPoint.x + 5, startPoint.y, startPoint.z - 5);
+            Vector3 startPoint5 = new Vector3(startPoint.x - 5, startPoint.y, startPoint.z);
+            Vector3 startPoint6 = new Vector3(startPoint.x - 5, startPoint.y, startPoint.z + 5);
+            Vector3 startPoint7 = new Vector3(startPoint.x, startPoint.y, startPoint.z - 5);
+            Vector3 startPoint8 = new Vector3(startPoint.x - 5, startPoint.y, startPoint.z - 5);
+
             RaycastHit hit;
-            if (Physics.Raycast(startPoint, Vector3.down, out hit) && hit.point.y > TerrainController.Water.transform.position.y && hit.collider.CompareTag("Terrain")) {
+            RaycastHit hit1;
+
+            RaycastHit hit2;
+            RaycastHit hit3;
+            RaycastHit hit4;
+            RaycastHit hit5;
+            RaycastHit hit6;
+            RaycastHit hit7;
+            RaycastHit hit8;
+
+            if (Physics.Raycast(startPoint, Vector3.down, out hit) 
+                && Physics.Raycast(startPoint1, Vector3.down, out hit1)
+                && Physics.Raycast(startPoint2, Vector3.down, out hit2)
+                && Physics.Raycast(startPoint3, Vector3.down, out hit3)
+                && Physics.Raycast(startPoint4, Vector3.down, out hit4)
+                && Physics.Raycast(startPoint5, Vector3.down, out hit5)
+                && Physics.Raycast(startPoint6, Vector3.down, out hit6)
+                && Physics.Raycast(startPoint7, Vector3.down, out hit7)
+                && Physics.Raycast(startPoint8, Vector3.down, out hit8)
+                && hit.point.y > TerrainController.Water.transform.position.y && hit.collider.CompareTag("Terrain")
+                && hit1.point.y > TerrainController.Water.transform.position.y && hit1.collider.CompareTag("Terrain")
+                && hit2.point.y > TerrainController.Water.transform.position.y && hit2.collider.CompareTag("Terrain")
+                && hit3.point.y > TerrainController.Water.transform.position.y && hit3.collider.CompareTag("Terrain")
+                && hit4.point.y > TerrainController.Water.transform.position.y && hit4.collider.CompareTag("Terrain")
+                && hit5.point.y > TerrainController.Water.transform.position.y && hit5.collider.CompareTag("Terrain")
+                && hit6.point.y > TerrainController.Water.transform.position.y && hit6.collider.CompareTag("Terrain")
+                && hit7.point.y > TerrainController.Water.transform.position.y && hit7.collider.CompareTag("Terrain")
+                && hit8.point.y > TerrainController.Water.transform.position.y && hit8.collider.CompareTag("Terrain")) {
+
                 Quaternion orientation = Quaternion.Euler(Vector3.up * Random.Range(0f, 360f));
                 RaycastHit boxHit;
                 // get object size 
                 GameObject objectToPlace = TerrainController.PlaceableObjects[prefabType];
                 Vector3 objectSize = objectToPlace.transform.localScale; 
-
-                // if (Physics.BoxCast(startPoint, TerrainController.PlaceableObjectSizes[prefabType], Vector3.down, out boxHit, orientation) && boxHit.collider.CompareTag("Terrain")) {
-                //     Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x, hit.point.y, startPoint.z), orientation, transform);
-                // }
 
                 if (Physics.BoxCast(startPoint, objectSize, Vector3.down, out boxHit, orientation) && boxHit.collider.CompareTag("Terrain"))
                 {
