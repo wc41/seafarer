@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sandy Biome Material
-  m_Shader: {fileID: -6465566751694194690, guid: 394200d0a69f26d43927b9f6b7e43907, type: 3}
+  m_Name: Yellow Tree Leaf Material 2
+  m_Shader: {fileID: -6465566751694194690, guid: a45f9259d362b0345b77ef0555ae8a0e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
@@ -45,8 +45,6 @@ Material:
     - ADDITIONAL_LIGHT_CALCULATE_SHADOWS: 1
     - MAIN_LIGHT_CALCULATE_SHADOWS: 1
     - _ADDITIONAL_LIGHTS: 1
-    - _Error_Threshold: 0.67
-    - _Height: 4.34
     - _MAIN_LIGHT_SHADOWS_CASCADE: 1
     - _QueueControl: 0
     - _QueueOffset: 0
@@ -54,19 +52,14 @@ Material:
     - _Rim_Light_Threshold: 0.1
     - _SHADOWS_SOFT: 1
     - _Shininess: 50
-    - _Smoothness: 0.49
     - _Specular_Light_Strength: 0.7
-    - _Step_Value: 0.42
     m_Colors:
     - _3_Tone_Thresholds: {r: 0.25, g: 0.58, b: 0, a: 0}
-    - _Grass_Highlight: {r: 0.7055833, g: 1, b: 0.654902, a: 0}
-    - _Grass_Midtone: {r: 0.5020883, g: 0.7169812, b: 0.4768601, a: 0}
-    - _Grass_Shadow: {r: 0.2905082, g: 0.4339623, b: 0.255874, a: 0}
-    - _Highlight: {r: 0.9811321, g: 0.8868224, b: 0.5322179, a: 0}
-    - _Midtone: {r: 0.6132076, g: 0.49542522, b: 0.2805714, a: 0}
+    - _Highlight: {r: 0.745283, g: 0.68007934, b: 0.33397114, a: 0}
+    - _Midtone: {r: 0.5377358, g: 0.40697154, b: 0.18516374, a: 0}
     - _Ramped_Diffuse_Values: {r: 0.2, g: 0.4, b: 1, a: 0}
     - _Rim_Light_Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Shadow: {r: 0.38679248, g: 0.29645392, b: 0.23900856, a: 0}
+    - _Shadow: {r: 0.3962264, g: 0.25757933, b: 0.08410467, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &6039378905138034242
 MonoBehaviour:
