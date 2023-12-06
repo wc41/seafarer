@@ -19,15 +19,16 @@ public class SkyManager : MonoBehaviour
             //(Replace with a reference to the game time)
             TimeOfDay += Time.deltaTime;
             TimeOfDay %= 24; //Modulus to ensure always between 0-24
+
             // update sky color 
             Material skyColor = GetComponent<Renderer>().sharedMaterial; 
-            skyColor.SetTextureOffset("_MainTex", new Vector2((TimeOfDay - 12) * .05f, 0));
+            skyColor.SetTextureOffset("_MainTex", new Vector2((TimeOfDay + 8) * .05f, 0));
         }
         else
         {
             // update sky color 
             Material skyColor = GetComponent<Renderer>().sharedMaterial;
-            skyColor.SetTextureOffset("_MainTex", new Vector2((TimeOfDay - 12) * .05f, 0));
+            skyColor.SetTextureOffset("_MainTex", new Vector2((TimeOfDay + 8) * .05f, 0));
 
         }
     }
