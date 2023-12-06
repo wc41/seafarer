@@ -43,7 +43,7 @@ Material:
     m_Floats:
     - _FogDensity: 4.73
     - _FogOffset: 0.02
-    - _TimeOfDay: 0.0974465
+    - _TimeOfDay: 10.070496
     m_Colors:
     - _FogColor: {r: 0.6886792, g: 0.64891773, b: 0.48987183, a: 0.3607843}
   m_BuildTextureStacks: []
