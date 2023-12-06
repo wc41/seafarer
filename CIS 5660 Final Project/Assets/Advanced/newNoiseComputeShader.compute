@@ -60,7 +60,6 @@ float island(float x, float y) {
     return hi;
 }
 
-
 float noise2DCliff(float2 n) {
     float noise = frac(cos(dot(n + 0.4, float2(7.9898, 5.1414))) * 13375.3);
     noise = pow(noise, 0.7);
@@ -164,7 +163,7 @@ float biomeBlend(float x, float y) {
     float cliffHeightValue = heightType(x, y);
     float cliffthreshold = 0.4;
     float cliffBlend = smoothstep(0.15, 0.94, abs(cliffHeightValue - cliffthreshold) * 2.0);
-    float cliffHeight1 = cliff(x, y) * 1.08;
+    float cliffHeight1 = cliff(x, y) * 1.04;
     float cliffHeight2 = cliff(x, y) * 1.00;
 
     float cliffHeightMultiplier = lerp(cliffHeight1, cliffHeight2, cliffBlend);

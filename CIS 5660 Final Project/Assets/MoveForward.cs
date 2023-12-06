@@ -7,7 +7,6 @@ public class MoveForward : MonoBehaviour
     private float rotationSpeed = 100f;
 
     private Rigidbody rb;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();

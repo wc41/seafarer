@@ -8,7 +8,6 @@ using UnityEngine;
 public class PlaceObjects : MonoBehaviour {
 
     public TerrainController TerrainController { get; set; }
-
     public void Place() {
         // random num objects btwn the min and max number of objects per tile 
         int numObjects = Random.Range(TerrainController.MinObjectsPerTile, TerrainController.MaxObjectsPerTile);
@@ -27,7 +26,6 @@ public class PlaceObjects : MonoBehaviour {
 
             RaycastHit hit;
             RaycastHit hit1;
-
             RaycastHit hit2;
             RaycastHit hit3;
             RaycastHit hit4;

@@ -93,7 +93,7 @@ public class GenerateMesh : MonoBehaviour {
                 positionData[j + 1] = new Data { x = noiseX, y = noiseZ1 };
                 positionData[j + 2] = new Data { x = noiseX1, y = noiseZ };
                 positionData[j + 3] = new Data { x = noiseX1, y = noiseZ1 };
-
+                
                 j = j + 4;
             }
         }

@@ -265,7 +265,7 @@ MonoBehaviour:
     m_NumColorKeys: 2
     m_NumAlphaKeys: 2
   noiseScale: 6.17
-  cellSize: 1.4
+  cellSize: 0.83
   radiusToRender: 14
   gameTransforms:
   - {fileID: 1560302064}
@@ -281,6 +281,7 @@ MonoBehaviour:
   - {fileID: 7950625574158723358, guid: 375628fa918ebd34ca60b3c25e060309, type: 3}
   - {fileID: 1338237476475137009, guid: 9e92e80033fe5014b8653c8d4bcba6b2, type: 3}
   - {fileID: 679258584927010405, guid: 6417b6c0d2feb9c49a2f64f5269ba797, type: 3}
+  terrainMaterial: {fileID: 2100000, guid: 93266657a4b62d241947c2f7747683da, type: 2}
   minObjectsPerTile: 0
   maxObjectsPerTile: 9
   destroyDistance: 1000
@@ -297,6 +298,7 @@ GameObject:
   - component: {fileID: 580105534}
   - component: {fileID: 580105533}
   - component: {fileID: 580105531}
+  - component: {fileID: 580105535}
   m_Layer: 0
   m_Name: Water
   m_TagString: Untagged
@@ -369,6 +371,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &580105535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580105530}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb069b50156631c43a24da323eaeae4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentTransform: {fileID: 1984499543}
 --- !u!1 &606017501
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb069b50156631c43a24da323eaeae4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentTransform: {fileID: 0}
+  parentTransform: {fileID: 1984499543}
 --- !u!1 &1186769702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3184041858329348970, guid: c77e213f2e428aa4f872b3712e5e0c76, type: 3}
@@ -1156,6 +1171,18 @@ PrefabInstance:
     - target: {fileID: 100010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
       propertyPath: m_Name
       value: SkyDome
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 400010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 400010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
       propertyPath: m_LocalPosition.x
