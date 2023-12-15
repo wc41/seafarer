@@ -20,7 +20,7 @@ RenderSettings:
   m_FogDensity: 0.01
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
-  m_AmbientSkyColor: {r: 0.121568635, g: 0.13725491, b: 0.35686275, a: 1}
+  m_AmbientSkyColor: {r: 0.12344251, g: 0.13757004, b: 0.3584906, a: 1}
   m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
@@ -150,7 +150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6958731710214797578, guid: 82ef19d08db63ed4f8714502a0bbc605, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 92.42
+      value: 42.78
       objectReference: {fileID: 0}
     - target: {fileID: 6958731710214797578, guid: 82ef19d08db63ed4f8714502a0bbc605, type: 3}
       propertyPath: m_LocalPosition.z
@@ -274,7 +274,7 @@ MonoBehaviour:
   DirectionalLight: {fileID: 606017502}
   Preset: {fileID: 11400000, guid: 0676375cd119d7349a4f272bdd2eb935, type: 2}
   TimeOfDay: 0
-  postProcessMaterial: {fileID: 2100000, guid: 5bab3a06f8f4a5949bcb98c1545ce0d5, type: 2}
+  postProcessMaterial: {fileID: 0}
 --- !u!4 &365605959
 Transform:
   m_ObjectHideFlags: 0
@@ -648,10 +648,7 @@ PrefabInstance:
     - {fileID: 100006, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
     - {fileID: 100008, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 100010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1383091822}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
 --- !u!1 &1156644609
 GameObject:
@@ -803,24 +800,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   parentTransform: {fileID: 1984499543}
---- !u!1 &1383091818 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100010, guid: d0223f77114284b47a0e8b317e71e4dc, type: 3}
-  m_PrefabInstance: {fileID: 877347320}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1383091822
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1383091818}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed3a5b53418d9114e91a30260158bb24, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TimeOfDay: 0
 --- !u!1 &1499369714
 GameObject:
   m_ObjectHideFlags: 0
