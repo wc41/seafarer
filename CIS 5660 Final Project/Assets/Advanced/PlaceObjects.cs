@@ -59,12 +59,11 @@ public class PlaceObjects : MonoBehaviour {
                     {
                         Instantiate(TerrainController.PlaceableObjects[prefabType], new Vector3(startPoint.x, hit.point.y, startPoint.z), orientation, transform);
                     }
-
                 }
 
                 //Debug code. To use, uncomment the giant thingy below
                 //Debug.DrawRay(startPoint, Vector3.down * 10000, Color.blue);
-                //DrawBoxCastBox(startPoint, TerrainController.PlaceableObjectSizes[prefabType], orientation, Vector3.down, 10000, Color.red);
+                //DrawBoxCastBox(startPoint, new Vector3(1, 1, 1), orientation, Vector3.down, 10000, Color.red);
                 //UnityEditor.EditorApplication.isPaused = true;
             }
 
@@ -82,7 +81,7 @@ public class PlaceObjects : MonoBehaviour {
 
     //code to help visualize the boxcast
     //source: https://answers.unity.com/questions/1156087/how-can-you-visualize-a-boxcast-boxcheck-etc.html
-    /*
+    
     //Draws just the box at where it is currently hitting.
     public static void DrawBoxCastOnHit(Vector3 origin, Vector3 halfExtents, Quaternion orientation, Vector3 direction, float hitInfoDistance, Color color) {
         origin = CastCenterOnCollision(origin, direction, hitInfoDistance);
@@ -179,5 +178,5 @@ public class PlaceObjects : MonoBehaviour {
         Vector3 direction = point - pivot;
         return pivot + rotation * direction;
     }
-    */
+    
 }

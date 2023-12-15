@@ -383,7 +383,7 @@ MonoBehaviour:
   - {fileID: 7950625574158723358, guid: 375628fa918ebd34ca60b3c25e060309, type: 3}
   - {fileID: 1338237476475137009, guid: 9e92e80033fe5014b8653c8d4bcba6b2, type: 3}
   - {fileID: 679258584927010405, guid: 6417b6c0d2feb9c49a2f64f5269ba797, type: 3}
-  terrainMaterial: {fileID: 0}
+  terrainMaterial: {fileID: 2100000, guid: 93266657a4b62d241947c2f7747683da, type: 2}
   minObjectsPerTile: 7
   maxObjectsPerTile: 19
   destroyDistance: 1000
